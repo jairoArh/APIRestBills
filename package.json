@@ -1,0 +1,30 @@
+{
+  "name": "apirest",
+  "version": "1.0.0",
+  "description": "Proyecto de Ejemplo de una APIRest",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/DevelopUPTC/APIRest"
+  },
+  "keywords": [
+    "js",
+    "node",
+    "rest"
+  ],
+  "author": "Jairo Armando",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^6.9.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}
