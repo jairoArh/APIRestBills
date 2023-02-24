@@ -1,9 +1,12 @@
 const route = require('express').Router()
 
 const {
-    index
+    index,
+    save
 } = require('../controllers/controll-bills')
 
 route.get('/',index)
+
+route.post('/:id',save)
 
 module.exports = route
