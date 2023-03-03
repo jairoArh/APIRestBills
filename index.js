@@ -2,6 +2,8 @@ const express = require('express')
 
 const app = express()
 
+const cors = require('cors')
+
 //Connect mongoose
 require('./drivers/connect-db')
 
@@ -9,8 +11,9 @@ require('./drivers/connect-db')
 app.set('port',process.env.PORT || 3000 )
 
 //middleware
+app.use(cors())
 app.use(express.json())
-app.use(express.urlencoded({extended:false}))
+//app.use(express.urlencoded({extended:true}))
 app.use('/bills',require('./routes/bills'))
 app.use('/customers',require('./routes/customer'))
 
