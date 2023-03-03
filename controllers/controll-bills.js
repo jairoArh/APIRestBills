@@ -25,18 +25,13 @@ module.exports = {
 
                 const result = await bill.save()
 
-                console.log('Hechooo')
-
                 customer.bills.push(bill)
 
                 await customer.save()
 
-                console.log("Done")
-
                 return res.status(200).json({"result":true,"data":result})
 
             }else{
-                console.log('Dizque no existe')
                 return res.status(500).json({"result":false,"error":"No existe el Cliente"})  
             }
         } catch (error) {
